@@ -1,0 +1,14 @@
+Dans github:
+- docker-compose.yml
+    - build les containers: BD mysql et prestashop avec les volumes de sauvegardes
+    - le build des images doivent utiliser les volumes de sauvegardes si present afin de ne pas tous reinstaller
+    - valeur sensible sont sauvegarder dans github dans données sécurisées A FAIRE
+- dossier de sauvegardes qui correspondent aux volumes de sauvegardes
+
+VM Ubuntu dans Oracle:
+- Installation manuelle docker et docker-compose et git
+- commande pour installer le docker-compose.yml
+- fichier pour faire regulierement des backups en local et dans github A FAIRE
+    - crontab
+
+Tout deployer dans Git puis dans la VM

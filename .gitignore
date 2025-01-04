@@ -1,0 +1,9 @@
+# Exclure les fichiers sensibles ou temporaires
+*.log
+*.tmp
+*.bak
+node_modules/
+.env
+
+# Exclure les volumes Docker non nécessaires
+backups/db_data/*
