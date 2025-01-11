@@ -29,6 +29,8 @@ services:
     environment:
       # DB_SERVER: mysql
       DB_SERVER: mysql
+      PS_DOMAIN: 204.216.106.138:8080
+      PS_INSTALL_AUTO: 1
     ports:
       - 8080:80
     networks:
