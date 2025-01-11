@@ -1,9 +1,9 @@
 FROM prestashop/prestashop:latest
 
 # Copie des fichiers de configuration personnalisés (thèmes, modules, etc.)
-COPY backups/themes /var/www/html/themes
-COPY backups/modules /var/www/html/modules
-COPY backups/config /var/www/html/config
+COPY prestashop/backups/themes /var/www/html/themes
+COPY prestashop/backups/modules /var/www/html/modules
+COPY prestashop/backups/config /var/www/html/config
 
 # Appliquez les permissions nécessaires
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
