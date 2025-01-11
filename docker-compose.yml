@@ -23,7 +23,7 @@ services:
 
   prestashop:
     build:
-      context: ./prestashop
+      context: .
       dockerfile: Dockerfile
     container_name: prestashop
     environment:
