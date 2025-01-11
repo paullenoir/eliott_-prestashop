@@ -2,7 +2,7 @@ Dans github:
 - docker-compose.yml
     - build les containers: BD mysql et prestashop avec les volumes de sauvegardes
     - le build des images doivent utiliser les volumes de sauvegardes si present afin de ne pas tous reinstaller
-    - valeur sensible sont sauvegarder dans github dans données sécurisées A FAIRE
+    - valeur sensible sont sauvegarder dans github dans données sécurisées
 - dossier de sauvegardes qui correspondent aux volumes de sauvegardes
 
 VM Ubuntu dans Oracle:

@@ -6,24 +6,6 @@ mkdir -p $BACKUP_DIR
 
 VOLUMES=("db_data" "ps_data" "ps_themes" "ps_modules" "ps_img" "ps_download" "ps_config" "ps_override" "ps_var")
 
-# echo "Début de la sauvegarde des volumes Docker..."
-
-# for volume in "${VOLUMES[@]}"; do
-#     echo "Sauvegarde du volume : $volume"
-#     docker run --rm -v $volume:/data -v $(pwd)/$BACKUP_DIR/$volume:/backup alpine sh -c "mkdir -p /backup && cp -a /data/* /backup/"
-# done
-
-# echo "Sauvegarde des volumes terminée."
-
-# # Sauvegarde dans GitHub
-# echo "Ajout des backups au dépôt Git..."
-# cd $(pwd)
-# git add backups/
-# git commit -m "Backup des volumes Docker à $(date)"
-# git push origin main
-
-# echo "Sauvegarde dans GitHub terminée."
-
 # Fonction pour gérer les erreurs
 handle_error() {
     echo "Erreur: $1"
