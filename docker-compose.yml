@@ -1,3 +1,12 @@
+# boot volume
+# D'abord créer un système de fichiers dessus (si ce n'est pas déjà fait) :
+# sudo mkfs.ext4 /dev/sda1
+# Puis créer un point de montage (un répertoire où le disque sera accessible) :
+# sudo mkdir /mnt/mondisque
+# Enfin, monter le disque sur ce point de montage :
+# sudo mount /dev/sda1 /mnt/mondisque
+# Après ces étapes, vous pourrez faire :
+# cd /mnt/mondisque
 # git clone https://github.com/paullenoir/eliott_prestashop.git
 # chmod +x .backups/custom-scripts/restore_volumes.sh
 # .backups/custom-scripts/restore_volumes.sh
@@ -27,10 +36,20 @@ services:
       dockerfile: Dockerfile
     container_name: prestashop
     environment:
-      # DB_SERVER: mysql
       DB_SERVER: mysql
+      DB_NAME: prestashop
+      DB_USER: root
+      DB_PASSWD: prestashop
       PS_DOMAIN: 204.216.106.138:8080
       PS_INSTALL_AUTO: 1
+      PS_LANGUAGE: fr
+      PS_COUNTRY: FR
+      PS_LOCALE: fr-FR
+      PS_ALL_LANGUAGES: 0
+      PS_FOLDER_ADMIN: admin-dev
+      PS_FOLDER_INSTALL: install
+      ADMIN_MAIL: lenoirpaul76@gmail.com
+      ADMIN_PASSWD: Bonjour3030!
     ports:
       - 8080:80
     networks:
