@@ -7,6 +7,31 @@
 # sudo mount /dev/sda1 /mnt/mondisque
 # Après ces étapes, vous pourrez faire :
 # cd /mnt/mondisque
+# Installation de PHP et des extensions courantes
+# Ajouter le dépôt PHP
+# sudo apt install software-properties-common
+# sudo add-apt-repository ppa:ondrej/php
+# sudo apt update
+
+# # Maintenant on peut installer PHP 8.1 et ses extensions
+# sudo apt install -y php8.1 \
+#     php8.1-cli \
+#     php8.1-common \
+#     php8.1-curl \
+#     php8.1-gd \
+#     php8.1-intl \
+#     php8.1-mbstring \
+#     php8.1-mysql \
+#     php8.1-xml \
+#     php8.1-zip \
+#     php8.1-bcmath \
+#     php8.1-fpm
+
+# # Vérifier la version de PHP installée
+# php -v
+
+# # Installation de Composer (gestionnaire de dépendances PHP)
+# curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 # git clone https://github.com/paullenoir/eliott_prestashop.git
 # chmod +x .backups/custom-scripts/restore_volumes.sh
 # .backups/custom-scripts/restore_volumes.sh
@@ -40,7 +65,7 @@ services:
       DB_NAME: prestashop
       DB_USER: root
       DB_PASSWD: prestashop
-      PS_DOMAIN: 204.216.106.138:8080
+      PS_DOMAIN: 204.216.106.138:80
       PS_INSTALL_AUTO: 1
       PS_LANGUAGE: fr
       PS_COUNTRY: FR
