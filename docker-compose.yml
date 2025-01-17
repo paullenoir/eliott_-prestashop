@@ -36,6 +36,7 @@
 # chmod +x .backups/custom-scripts/restore_volumes.sh
 # .backups/custom-scripts/restore_volumes.sh
 # docker-compose up -d
+# docker-compose logs -f
 
 version: '3.9'
 
