@@ -69,16 +69,16 @@ services:
       DB_NAME: prestashop
       DB_USER: root
       DB_PASSWD: prestashop
-      PS_DOMAIN: 204.216.106.138:80
-      PS_INSTALL_AUTO: 1
-      PS_LANGUAGE: fr
-      PS_COUNTRY: FR
-      PS_LOCALE: fr-FR
-      PS_ALL_LANGUAGES: 0
-      PS_FOLDER_ADMIN: admin-dev
-      PS_FOLDER_INSTALL: install
-      ADMIN_MAIL: lenoirpaul76@gmail.com
-      ADMIN_PASSWD: Bonjour3030!
+      # PS_DOMAIN: 204.216.106.138:80
+      # PS_INSTALL_AUTO: 1
+      # PS_LANGUAGE: fr
+      # PS_COUNTRY: FR
+      # PS_LOCALE: fr-FR
+      # PS_ALL_LANGUAGES: 0
+      # PS_FOLDER_ADMIN: admin-dev
+      # PS_FOLDER_INSTALL: install
+      # ADMIN_MAIL: lenoirpaul76@gmail.com
+      # ADMIN_PASSWD: Bonjour3030!
     ports:
       - 8080:80
     networks:
