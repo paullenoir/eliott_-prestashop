@@ -55,9 +55,9 @@ services:
       - 3306:3306
     networks:
       - prestashop
-    volumes:
-      - db_data:/var/lib/mysql
-      - db_logs:/var/log/mysql
+    # volumes:
+    #   - db_data:/var/lib/mysql
+    #   - db_logs:/var/log/mysql
 
   prestashop:
     build:
@@ -83,29 +83,29 @@ services:
       - 8080:80
     networks:
       - prestashop
-    volumes:
-      - ps_data:/var/www/html
-      - ps_themes:/var/www/html/themes
-      - ps_modules:/var/www/html/modules
-      - ps_img:/var/www/html/img
-      - ps_download:/var/www/html/download
-      - ps_config:/var/www/html/config
-      - ps_override:/var/www/html/override
-      - ps_var:/var/www/html/var
+    # volumes:
+    #   - ps_data:/var/www/html
+    #   - ps_themes:/var/www/html/themes
+    #   - ps_modules:/var/www/html/modules
+    #   - ps_img:/var/www/html/img
+    #   - ps_download:/var/www/html/download
+    #   - ps_config:/var/www/html/config
+    #   - ps_override:/var/www/html/override
+    #   - ps_var:/var/www/html/var
     depends_on:
       - mysql
 
 networks:
   prestashop:
 
-volumes:
-  db_data:
-  db_logs:
-  ps_data:
-  ps_themes:
-  ps_modules:
-  ps_img:
-  ps_download:
-  ps_config:
-  ps_override:
-  ps_var:
+# volumes:
+#   db_data:
+#   db_logs:
+#   ps_data:
+#   ps_themes:
+#   ps_modules:
+#   ps_img:
+#   ps_download:
+#   ps_config:
+#   ps_override:
+#   ps_var:
