@@ -60,9 +60,10 @@ services:
     #   - db_logs:/var/log/mysql
 
   prestashop:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: prestashop/prestashop:8
     container_name: prestashop
     environment:
       DB_SERVER: mysql
