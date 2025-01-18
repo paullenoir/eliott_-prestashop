@@ -43,11 +43,7 @@
 
 # # Arrêter tous les conteneurs en cours d'exécution
 # docker stop $(docker ps -a -q)
-
-# # Supprimer tous les conteneurs
 # docker rm $(docker ps -a -q)
-
-# # Supprimer toutes les images
 # docker rmi $(docker images -q) -f
 
 # # Pour vérifier que tout est bien supprimé
@@ -58,7 +54,8 @@ version: '3.9'
 
 services:
   mysql:
-    image: mysql:8.3
+    image: mysql
+    restart: always
     container_name: prestashop-db
     command: --default-authentication-plugin=mysql_native_password
     environment:
