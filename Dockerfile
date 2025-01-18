@@ -1,4 +1,4 @@
-FROM prestashop/prestashop:latest
+FROM prestashop/prestashop:8
 
 # Copie des fichiers de configuration personnalisés (thèmes, modules, etc.) si les fichiers existent
 RUN [ -d "prestashop/backups/themes" ] && cp -r prestashop/backups/themes /var/www/html/themes || echo "No themes directory to copy"
