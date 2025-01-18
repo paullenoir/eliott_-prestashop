@@ -88,7 +88,7 @@ services:
       PS_FOLDER_ADMIN: admin2
       PS_FOLDER_INSTALL: install2
     ports:
-      - 80:8080
+      - 8080:80
     networks:
       - prestashop
     # volumes:
