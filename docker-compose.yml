@@ -1,34 +1,37 @@
-# boot volume
-# D'abord créer un système de fichiers dessus (si ce n'est pas déjà fait) :
-# sudo mkfs.ext4 /dev/sda1
-# Puis créer un point de montage (un répertoire où le disque sera accessible) :
-# sudo mkdir /mnt/mondisque
-# Enfin, monter le disque sur ce point de montage :
-# sudo mount /dev/sda1 /mnt/mondisque
-# Après ces étapes, vous pourrez faire :
-# cd /mnt/mondisque
-# Installation de PHP et des extensions courantes
-# Ajouter le dépôt PHP
-# sudo apt install software-properties-common
-# sudo add-apt-repository ppa:ondrej/php
-# sudo apt update
+# # boot volume
+# # D'abord créer un système de fichiers dessus (si ce n'est pas déjà fait) :
+# # sudo mkfs.ext4 /dev/sda1
+# # Puis créer un point de montage (un répertoire où le disque sera accessible) :
+# # sudo mkdir /mnt/mondisque
+# # Enfin, monter le disque sur ce point de montage :
+# # sudo mount /dev/sda1 /mnt/mondisque
+# # Après ces étapes, vous pourrez faire :
+# # cd /mnt/mondisque
+# # Installation de PHP et des extensions courantes
+# # Ajouter le dépôt PHP
+# # sudo apt install software-properties-common
+# # sudo add-apt-repository ppa:ondrej/php
+# # sudo apt update
 
-# # Maintenant on peut installer PHP 8.1 et ses extensions
-# sudo apt install -y php8.1 \
-#     php8.1-cli \
-#     php8.1-common \
-#     php8.1-curl \
-#     php8.1-gd \
-#     php8.1-intl \
-#     php8.1-mbstring \
-#     php8.1-mysql \
-#     php8.1-xml \
-#     php8.1-zip \
-#     php8.1-bcmath \
-#     php8.1-fpm
+# # # Maintenant on peut installer PHP 8.1 et ses extensions
+# # sudo apt install -y php8.1 \
+# #     php8.1-cli \
+# #     php8.1-common \
+# #     php8.1-curl \
+# #     php8.1-gd \
+# #     php8.1-intl \
+# #     php8.1-mbstring \
+# #     php8.1-mysql \
+# #     php8.1-xml \
+# #     php8.1-zip \
+# #     php8.1-bcmath \
+# #     php8.1-fpm
 
-# # Vérifier la version de PHP installée
-# php -v
+# # # Vérifier la version de PHP installée
+# # php -v
+
+# lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT
+# df -h /
 
 # # Installation de Composer (gestionnaire de dépendances PHP)
 # curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
